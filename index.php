@@ -9,9 +9,9 @@ $map     = '';
 $avatar  = 'img/nouser.png';
 
 $authors = array(
-    1 => 'FIRST SONG NAME',
-    2 => 'SECOND SONG NAME',
-    3 => 'THIRD SONG NAME'
+    1 => 'Kyle - I Spy',
+    2 => 'Rae Sremmurd - Come Get Her',
+    3 => 'Rae Sremmurd - Throw Sum Mo'
 );
 
 $pictures = array(1,2,3);
@@ -21,7 +21,7 @@ if (isset($_GET['mapname']))
     $map = '<br>You will play the map: '.$_GET['mapname'];
 
 if (isset($_GET['steamid'])) {
-    $data = 'http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&steamids='.$_GET['steamid'];
+    $data = 'http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=957566BC768A41A72C321ACE886E946D&steamids='.$_GET['steamid'];
     $f = file_get_contents($data);
     $arr = json_decode($f, true);
     if (isset($arr['response']['players'][0]['personaname']))
